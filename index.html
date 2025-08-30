@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>SRDTT</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="images/icons.png">  
+  <meta name="description" content="Club de Tennis de Table de St-Dié-des-Vosges,SRDTT, SRD Tennis de Table Déodatien.">
+  <meta name="keywords" content="tennis de table, club, St-Dié, SRDTT, ping-pong, Déodatien, 88100 ">
+</head>
+<body>
+  <header>
+    <img src="images/club.jpg" alt="Logo du club" />
+    <h1>Club de Tennis de Table de St-Dié-des-Vosges</h1>
+    <nav>
+      <button onclick="showTab('Club')">Club</button>
+      <button onclick="showTab('Entrainements')">Entraînements</button>
+      <button onclick="showTab('Salle')">Salle</button>     
+      <button onclick="showTab('Contact')">Contact</button>
+      <button onclick="showTab('Actualite')">Actualité</button>
+      <button onclick="showTab('Sponsors')">Nos sponsors</button>      
+    </nav>
+  </header>
+
+  <main>
+    <!-- 
+    ___              _      _      ____ _       _      
+   / _ \ _ __   __ _| | ___| |_   / ___| |_   _| |__   
+  | | | | '_ \ / _` | |/ _ \ __| | |   | | | | | '_ \  
+  | |_| | | | | (_| | |  __/ |_  | |___| | |_| | |_) | 
+   \___/|_| |_|\__, |_|\___|\__|  \____|_|\__,_|_.__/  
+               |___/                                   
+     -->
+    <section id="Club" class="tab-content">
+		<div class="intro-text">
+		<p class="paragraph">
+			<span class="highlight">Bienvenue</span> au club de Tennis de Table de <span class="highlight">St-Dié-des-Vosges</span>.  
+			Nous accueillons <strong>joueurs débutants, loisirs et compétiteurs</strong> dans une ambiance conviviale.
+		</p>
+		
+		<p class="paragraph">
+			Le <strong>SRDTT</strong> (Club de Tennis de Table de Saint-Dié-des-Vosges) compte aujourd’hui <strong>près de 80 licenciés</strong>,  
+			ce qui en fait l’un des plus importants clubs des Vosges.
+		</p>
+
+		<p class="paragraph">
+			Depuis longtemps, notre club a su allier une ambiance familiale et amicale à un véritable esprit compétitif,  
+			offrant un cadre convivial où chacun peut <strong>progresser à son rythme, des débutants aux compétiteurs aguerris, et ce, quel que soit l’âge</strong>.
+		</p>
+
+	
+		</div>
+      <div class="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item" data-caption="C1">
+             <img src="images/club1.jpg" alt="Club image 1" />
+          </div>
+          <div class="carousel-item" data-caption="C2">
+            <img src="images/club2.jpg" alt="Club image 2" />
+          </div>
+          <div class="carousel-item" data-caption="C3">
+            <img src="images/club3.jpg" alt="Club image 3" />
+          </div>
+           <div class="carousel-item" data-caption="C4">
+            <img src="images/club4.jpg" alt="Club image 4" />
+          </div>
+           <div class="carousel-item" data-caption="C5">
+            <img src="images/club5.jpg" alt="Club image 5" />
+          </div>  
+ <!--                
+          <div class="carousel-item" data-caption="C6">
+            <img src="images/club6.jpg" alt="Club image 6" />
+          </div>     
+-->            
+           <div class="carousel-item" data-caption="C7">
+            <img src="images/club7.jpg" alt="Club image 7" />
+          </div>                
+           <div class="carousel-item" data-caption="C8">
+            <img src="images/club8.jpg" alt="Club image 8" />
+          </div>  
+           <div class="carousel-item" data-caption="C9">
+            <img src="images/club9.jpg" alt="Club image 9" />
+          </div>                         
+                            
+        </div>
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+        <div class="caption"></div>
+      </div>
+    </section>
+
+    <!-- 
+     ___              _      _     _____       _            //\                                _    
+  / _ \ _ __   __ _| | ___| |_  | ____|_ __ | |_ _ __ __ |/_\| __   ___ _ __ ___   ___ _ __ | |_  
+ | | | | '_ \ / _` | |/ _ \ __| |  _| | '_ \| __| '__/ _` | | '_ \ / _ \ '_ ` _ \ / _ \ '_ \| __| 
+ | |_| | | | | (_| | |  __/ |_  | |___| | | | |_| | | (_| | | | | |  __/ | | | | |  __/ | | | |_  
+  \___/|_| |_|\__, |_|\___|\__| |_____|_| |_|\__|_|  \__,_|_|_| |_|\___|_| |_| |_|\___|_| |_|\__| 
+              |___/                                                                               
+    -->
+    <section id="Entrainements" class="tab-content" style="display:none;">
+      <h2>Horaires d'entraînement 2024-2025</h2>
+      <ul>
+      <img src="images/Horaires.png" alt="Timeschedule">
+		  <br><br>
+	      <em>
+			Nos entraîneurs bénévoles sont :
+			<ul>
+			<li>Pour les débutants : René Paris et Louis Simon</li>
+			<li>Pour les jeunes compétiteurs : Louis Simon</li>
+			<li>Pour les jeunes compétiteurs élites : Tristan Ebersold</li>			
+			<li>Pour les adultes compétiteurs et élites : Jérôme Dombrat</li>
+			</ul>
+		   </em>
+		</li>
+
+      
+      </ul>
+    </section>
+
+    <!-- 
+   ___              _      _     ____        _ _      
+  / _ \ _ __   __ _| | ___| |_  / ___|  __ _| | | ___ 
+ | | | | '_ \ / _` | |/ _ \ __| \___ \ / _` | | |/ _ \
+ | |_| | | | | (_| | |  __/ |_   ___) | (_| | | |  __/
+  \___/|_| |_|\__, |_|\___|\__| |____/ \__,_|_|_|\___|
+              |___/                                   
+     -->
+    <section id="Salle" class="tab-content" style="display:none;">
+      <h2>Gymnase René Perrin</h2>
+      <ul>
+        <li>15, Rue de Foucharupt, 88100 - Saint-Dié-des-Vosges</li>
+      </ul>    
+   <!-- Carrousel -->     
+      <div class="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item" data-caption="S1">
+             <img src="images/Salle1.png" alt="Salle image 1" />
+          </div>
+          <div class="carousel-item" data-caption="S2">
+            <img src="images/Salle2.jpg" alt="Salle image 2" />
+          </div>
+          <div class="carousel-item" data-caption="S3">
+            <img src="images/Salle3.jpg" alt="Salle image 3" />
+          </div>
+        </div>
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+        <div class="caption"></div>
+      </div>
+   <!-- Image lien vers Google Maps -->
+	  <div class="map-link" style="margin-top:15px; text-align:center;">
+		<a href="https://www.google.com/maps/place/Gymnase+Ren%C3%A9+Perrin/@48.280083,6.9498825,719m/data=!3m2!1e3!4b1!4m6!3m5!1s0x4793ef3f4370b617:0x98d3a0e395caaccb!8m2!3d48.2800795!4d6.9524574!16s%2Fg%2F11scc8q479?entry=ttu&g_ep=EgoyMDI1MDgxNy4wIKXMDSoASAFQAw%3D%3D" 
+			target="_blank">
+			<img src="images/sallemap1.jpg" alt="Voir sur Google Maps" style="max-width:300px; border:1px solid #ccc; border-radius:8px;"/>
+		</a>
+		<p><a href="https://www.google.com/maps/place/Gymnase+Ren%C3%A9+Perrin/@48.280083,6.9498825,719m/data=!3m2!1e3!4b1!4m6!3m5!1s0x4793ef3f4370b617:0x98d3a0e395caaccb!8m2!3d48.2800795!4d6.9524574!16s%2Fg%2F11scc8q479?entry=ttu&g_ep=EgoyMDI1MDgxNy4wIKXMDSoASAFQAw%3D%3D" target="_blank">📍 Voir sur Google Maps</a></p>
+	  </div>     
+
+    </section>   
+
+    <!-- 
+   ___              _      _      ____            _             _   
+  / _ \ _ __   __ _| | ___| |_   / ___|___  _ __ | |_ __ _  ___| |_ 
+ | | | | '_ \ / _` | |/ _ \ __| | |   / _ \| '_ \| __/ _` |/ __| __|
+ | |_| | | | | (_| | |  __/ |_  | |__| (_) | | | | || (_| | (__| |_ 
+  \___/|_| |_|\__, |_|\___|\__|  \____\___/|_| |_|\__\__,_|\___|\__|
+              |___/                                                 
+     -->
+    <section id="Contact" class="tab-content" style="display:none;">
+      <h2>Nous contacter</h2>
+      <ul>        
+    <article class="card" aria-labelledby="name-simon">
+      <div>
+        <h2 id="name-simon">Louis SIMON </h2>
+        <div class="roles">Secrétaire du SRD TT et entraîneur</div>
+        <div class="contact">
+          <div>Email : <a href="mailto:lsimon@ville-saintdie.fr">lsimon@ville-saintdie.fr</a></div>
+          <div>Téléphone : <a href="tel:+33662588852">06 62 58 88 52</a></div>
+        </div>
+      </div>
+    </article>
+    
+     <article class="card" aria-labelledby="name-paris">
+      <div>
+        <h2 id="name-paris">René  PARIS  </h2>
+        <div class="roles">Trésorier du SRD TT et entraîneur</div>
+        <div class="contact">
+          <div>Email : <a href="mailto:parisrene@orange.fr">parisrene@orange.fr</a></div>
+          <div>Téléphone : <a href="tel:+33683055114">06 83 05 51 14</a></div>
+        </div>
+      </div>
+    </article>   
+
+    <article class="card" aria-labelledby="name-dombrat">
+      <div>
+        <h2 id="name-dombrat"> Jérôme DOMBRAT </h2>
+        <div class="roles">Président du SRD TT et entraîneur</div>
+        <div class="contact">
+          <div>Email : <a href="mailto:jeromedombrat@orange.fr">jeromedombrat@orange.fr</a></div>
+          <div>Téléphone : <a href="tel:+33613446068">06 13 44 60 68</a></div>
+        </div>
+      </div>
+    </article>
+    
+  	  <br><br>
+	    <em>      
+        <li>Adresse : Gymnase René Perrin, 15, Rue de Foucharupt, 88100 - Saint-Dié-des-Vosges</li>
+        <em>    
+      </ul>
+    </section>
+
+    <!-- 
+   ___              _      _        _        _               _ _ _    __ 
+  / _ \ _ __   __ _| | ___| |_     / \   ___| |_ _   _  __ _| (_) |_ /_/ 
+ | | | | '_ \ / _` | |/ _ \ __|   / _ \ / __| __| | | |/ _` | | | __/ _ \
+ | |_| | | | | (_| | |  __/ |_   / ___ \ (__| |_| |_| | (_| | | | ||  __/
+  \___/|_| |_|\__, |_|\___|\__| /_/   \_\___|\__|\__,_|\__,_|_|_|\__\___|
+              |___/                                                      
+     -->
+  
+<section id="Actualite" class="tab-content" style="display:none;">
+  <div class="actualite-container">
+    <h2>Actualités</h2>
+    
+    <!-- Section Facebook -->
+    <div class="social-card">
+      <div class="social-icon">📢</div>
+      <div class="social-content">
+        <p>Retrouvez notre actualité sur le réseau social -Facebook :</p>
+        <a href="https://www.facebook.com/srdttdeodatien/?locale=fr_FR" target="_blank" class="btn-facebook">
+          Page Facebook du club SRDTT 
+        </a>
+      </div>
+    </div>
+  
+
+    <!-- Section Google Form -->
+     <!--   
+    <div class="form-card">
+      <h3>Inscription aux événements</h3>
+      <div class="form-container">
+        <iframe src="https://docs.google.com/forms/d/e/..." width="100%" height="500" frameborder="0" style="border-radius: 8px;"></iframe>
+      </div>
+      <p class="form-note">⚠️ Pensez à vérifier vos emails après inscription</p>
+    </div>
+  </div>
+-->
+
+
+</section>
+
+    <!-- 
+
+   ___              _      _     ____                                       
+  / _ \ _ __   __ _| | ___| |_  / ___| _ __   ___  _ __  ___  ___  _ __ ___ 
+ | | | | '_ \ / _` | |/ _ \ __| \___ \| '_ \ / _ \| '_ \/ __|/ _ \| '__/ __|
+ | |_| | | | | (_| | |  __/ |_   ___) | |_) | (_) | | | \__ \ (_) | |  \__ \
+  \___/|_| |_|\__, |_|\___|\__| |____/| .__/ \___/|_| |_|___/\___/|_|  |___/
+              |___/                   |_|                                   
+ 
+     -->
+ <section id="Sponsors" class="tab-content" style="display:none;">
+  <h2>Nos Sponsors et partenaires </h2>
+
+  <div class="container">
+    <div class="logo-grid">
+      <!-- Sponsor 1 -->
+      <figure class="logo">
+        <a href="https://www.aux-ptits-plats-saint-die-des-vosges.fr/" target="_blank" aria-label="Sponsor 1">
+          <div class="logo-img-wrap">
+            <img src="images/sponsor1.png" alt="Logo Sponsor 1">
+          </div>
+        </a>
+        <figcaption>
+          <span class="name">Retaurant Aux P'tits Plats</span>
+        <!--         <span class="meta">10 rue  d'Amérique, 88100 St-Dié-Des-Vosges </span>-->
+        </figcaption>
+      </figure>
+
+      <!-- Sponsor 2 -->
+      <figure class="logo">
+        <a href="https://to-opticien.net/" target="_blank" aria-label="Sponsor 2">
+          <div class="logo-img-wrap">
+            <img src="images/sponsor2.png" alt="Logo Sponsor 2">
+          </div>
+        </a>
+        <figcaption>
+          <span class="name">Opticien - Moyenmoutier</span>
+           <!--<span class="meta">6 Rue de L Hôtel de ville, 88420 Moyenmoutier</span>-->
+        </figcaption>
+      </figure>
+
+      <!-- Sponsor 3 -->
+      <figure class="logo">
+        <a href="https://gestra.fr/" target="_blank" aria-label="Sponsor 3">
+          <div class="logo-img-wrap">
+            <img src="images/sponsor3.png" alt="Logo Sponsor 3">
+          </div>
+        </a>
+        <figcaption>
+          <span class="name">Logistique de Main d'oeuvre et de Conditionnement</span>
+        </figcaption>
+      </figure>
+
+      <!-- Sponsor 4 -->
+      <figure class="logo">		  
+        <a href="https://www.jr-energies.fr/" target="_blank" aria-label="Sponsor 4">		  
+          <div class="logo-img-wrap">
+            <img src="images/sponsor4.png" alt="Logo Sponsor 4">
+          </div>
+        </a>        
+        <figcaption>
+          <span class="name">Spécialiste en systèmes de chauffage</span>
+           <!--<span class="meta">Adresse : 12 rue Exemple, 88000 Saint-Dié</span>-->
+        </figcaption>
+      </figure>
+      
+       <!-- Sponsor 5 -->
+      <figure class="logo">		  
+        <a href="https://shemsy.fr/" target="_blank" aria-label="Sponsor 5">		  
+          <div class="logo-img-wrap">
+            <img src="images/sponsor5.png" alt="Logo Sponsor 5">
+          </div>
+        </a>        
+        <figcaption>
+          <span class="name"> Spécialiste de vetements de sport - Plainfaing</span>
+        </figcaption>
+      </figure>     
+ 
+        <!-- Sponsor 6 -->
+      <figure class="logo">		  
+        <a href="https://www.wsport.com/" target="_blank" aria-label="Sponsor 6">		  
+          <div class="logo-img-wrap">
+            <img src="images/sponsor6.png" alt="Logo Sponsor 6">
+          </div>
+        </a>        
+        <figcaption>
+          <span class="name"> vente d'équipements et de matériels pour le tennis de table</span>
+        </figcaption>
+      </figure>     
+    </div>
+  </div> 
+  
+
+  <h2>Et avec l'aide et le soutien de :</h2>
+
+  <div class="container">
+    <div class="logo-grid">
+      <!-- Partenaire 1 -->
+      <figure class="logo">
+        <a href="https://www.saint-die-des-vosges.fr/" target="_blank" aria-label="Partenaire 1">
+          <div class="logo-img-wrap">
+            <img src="images/partenaire1.png" alt="Logo Partenaire 1">
+          </div>
+        </a>
+        <figcaption>
+          <span class="name">Ville de St-Dié-Des-Vosges</span>
+        </figcaption>
+      </figure>
+
+      <!-- Partenaire 2 -->
+      <figure class="logo">
+        <a href="https://www.lgett.fr/accueil" target="_blank" aria-label="Partenaire 2">		  
+          <div class="logo-img-wrap">
+            <img src="images/partenaire2.png" alt="Logo Partenaire 2">
+          </div>
+        </a>      
+        <figcaption>
+          <span class="name">Ligue du Grand Est de Tennis de Table</span>
+        </figcaption>
+      </figure>
+
+      <!-- Partenaire 3 -->
+      <figure class="logo">
+        <a href="https://www.lgett.fr/la-ligue/comites-departementaux/cd-88" target="_blank" aria-label="Partenaire 3">
+          <div class="logo-img-wrap">
+            <img src="images/partenaire3.png" alt="Logo Partenaire 3">
+          </div>
+        </a>
+        <figcaption>
+          <span class="name">Comité des Vosges de Tennis de Table</span>
+        </figcaption>
+      </figure>
+
+   
+      <!-- Partenaire 4 -->
+      <figure class="logo">
+        <a href="https://www.grandest.fr/fonctionnement-de-la-region/conseil-regional/" target="_blank" aria-label="Partenaire 4">
+          <div class="logo-img-wrap">
+            <img src="images/partenaire4.png" alt="Logo Partenaire 4">
+          </div>
+        </a>
+        <figcaption>
+          <span class="name">Conseil régional du Grand Est</span>
+        </figcaption>
+      </figure>   
+
+      <!-- Partenaire 5 -->
+      <figure class="logo">
+        <a href="https://www.vosges.fr/" target="_blank" aria-label="Partenaire 5">
+          <div class="logo-img-wrap">
+            <img src="images/partenaire5.png" alt="Logo Partenaire 5">
+          </div>
+        </a>
+        <figcaption>
+          <span class="name">Le conseil général des vosges</span>
+        </figcaption>
+      </figure>         
+   
+    </div>
+  </div>
+</section>
+
+ 
+
+
+  </main>
+
+  <footer>
+    <p>© 2025 Club de Tennis de Table de St-Dié-Des-Vosges</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
