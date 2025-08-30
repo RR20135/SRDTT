@@ -47,6 +47,11 @@ header img {
   height: 80px;
 }
 
+.header-logo {
+  max-width: 100%;
+  height: auto;
+}
+
 nav {
   display: flex;
   flex-wrap: wrap;
@@ -67,6 +72,78 @@ nav button:hover {
   background-color: #f8d7da; /* rouge clair pastel */
   border-radius: 4px;
   color: #8b0000;
+}
+/* ==============================
+   MENU RESPONSIVE / HAMBURGER pour petit ecran
+   ============================== */
+
+/* 1. Cacher le bouton menu sur grand écran */
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px 15px;
+}
+
+/* 2. Menu flottant caché par défaut */
+.menu-box {
+  display: flex;          /* affiché par défaut sur PC */
+  flex-direction: row;    /* boutons en ligne sur grand écran */
+  gap: 5px;
+}
+
+/* Styles des boutons dans la boîte */
+.menu-box button {
+  padding: 10px 15px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* Responsive pour écran <768px */
+@media (max-width: 768px) {
+  nav {
+    position: relative;
+  }
+
+  /* Affiche le bouton ☰ Menu */
+  .menu-toggle {
+    display: block;
+  }
+
+  /* Masquer les boutons dans menu-box par défaut */
+  .menu-box {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color:  rgba(153,0,0,0.95);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    z-index: 1000;
+  }
+
+  .menu-box button {
+	width: 100%;
+	text-align: left;
+	padding: 12px 20px;
+	border: none;
+	background: none;
+	color: white;
+	border-bottom: 1px solid #800000;
+	cursor: pointer;
+	font-size: 0.9rem; /* <-- taille du texte */
+  }
+
+  /* Afficher le menu-box quand nav a la classe active */
+  nav.active .menu-box {
+    display: flex;
+  }
 }
 
 /**************************************************
@@ -101,7 +178,7 @@ footer {
 .intro-text {
   text-align: justify;
   font-family: 'Georgia', serif;
-  font-size: 1.1rem;
+  font-size: 1.0rem;
   color: #333;
   line-height: 1.6;
   max-width: 800px;
@@ -114,7 +191,7 @@ footer {
 }
 
 .paragraph {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.0rem;
 }
 
 /**************************************************
@@ -167,7 +244,17 @@ footer {
   border-radius: 999px;
   font-size: 0.85rem;
 }
+.adresse {
+  list-style: none;      /* supprime les puces */
+  padding: 0;            /* supprime le padding par défaut de la liste */
+  margin: 0;             /* supprime la marge par défaut */
+  font-size: 1.1rem;     /* taille un peu plus grande que le texte normal */
+  line-height: 1.5;      /* espacement entre les lignes */
+}
 
+.adresse li {
+  margin-bottom: 0.3rem; /* petit espace entre chaque ligne */
+}
 /**************************************************
      _        _               _ _ _    __      
     / \   ___| |_ _   _  __ _| (_) |_ /_/  ___ 

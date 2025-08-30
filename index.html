@@ -11,15 +11,18 @@
 </head>
 <body>
   <header>
-    <img src="images/club.jpg" alt="Logo du club" />
-    <h1>Club de Tennis de Table de St-Dié-des-Vosges</h1>
+    <img src="images/club.png" alt="Logo du club" class="header-logo" >
+    <!--     <h1>Club de Tennis de Table de St-Dié-des-Vosges</h1>  -->
     <nav>
-      <button onclick="showTab('Club')">Club</button>
-      <button onclick="showTab('Entrainements')">Entraînements</button>
-      <button onclick="showTab('Salle')">Salle</button>     
-      <button onclick="showTab('Contact')">Contact</button>
-      <button onclick="showTab('Actualite')">Actualité</button>
-      <button onclick="showTab('Sponsors')">Nos sponsors</button>      
+		<button class="menu-toggle" id="mobile-menu">☰ Menu</button>
+		<div class="menu-box">
+			<button onclick="showTab('Club')">Le club</button>
+			<button onclick="showTab('Entrainements')">Entraînements</button>
+			<button onclick="showTab('Salle')">Salle</button>     
+			<button onclick="showTab('Contact')">Contact</button>
+			<button onclick="showTab('Actualite')">Actualité</button>
+			<button onclick="showTab('Sponsors')">Nos partenaires</button>
+		</div>    
     </nav>
   </header>
 
@@ -35,18 +38,13 @@
     <section id="Club" class="tab-content">
 		<div class="intro-text">
 		<p class="paragraph">
-			<span class="highlight">Bienvenue</span> au club de Tennis de Table de <span class="highlight">St-Dié-des-Vosges</span>.  
-			Nous accueillons <strong>joueurs débutants, loisirs et compétiteurs</strong> dans une ambiance conviviale.
-		</p>
-		
-		<p class="paragraph">
-			Le <strong>SRDTT</strong> (Club de Tennis de Table de Saint-Dié-des-Vosges) compte aujourd’hui <strong>près de 80 licenciés</strong>,  
+			Le <strong>SRDTT</strong> (Club de Tennis de Table de Saint-Dié-des-Vosges) accueille joueurs débutants, loisirs et compétiteurs dans une ambiance conviviale. Il compte près de 80 licenciés,  
 			ce qui en fait l’un des plus importants clubs des Vosges.
 		</p>
 
 		<p class="paragraph">
-			Depuis longtemps, notre club a su allier une ambiance familiale et amicale à un véritable esprit compétitif,  
-			offrant un cadre convivial où chacun peut <strong>progresser à son rythme, des débutants aux compétiteurs aguerris, et ce, quel que soit l’âge</strong>.
+			Depuis longtemps, notre club a su allier une ambiance familiale et conviviale à un véritable esprit compétitif,  
+			offrant un cadre chaleureux où chacun peut <strong>progresser à son rythme, des débutants aux compétiteurs aguerris, et ce, quel que soit l’âge, grâce à nos entraîneurs bénévoles</strong>.
 		</p>
 
 	
@@ -190,9 +188,9 @@
           <div>Téléphone : <a href="tel:+33683055114">06 83 05 51 14</a></div>
         </div>
       </div>
-    </article>   
+     </article>   
 
-    <article class="card" aria-labelledby="name-dombrat">
+     <article class="card" aria-labelledby="name-dombrat">
       <div>
         <h2 id="name-dombrat"> Jérôme DOMBRAT </h2>
         <div class="roles">Président du SRD TT et entraîneur</div>
@@ -201,13 +199,15 @@
           <div>Téléphone : <a href="tel:+33613446068">06 13 44 60 68</a></div>
         </div>
       </div>
-    </article>
-    
-  	  <br><br>
-	    <em>      
-        <li>Adresse : Gymnase René Perrin, 15, Rue de Foucharupt, 88100 - Saint-Dié-des-Vosges</li>
-        <em>    
-      </ul>
+     </article>
+	
+	<h2>Adresse :</h2>
+    <ul class="adresse">
+		<li>SRDTT</li>
+		<li>Gymnase René Perrin</li>
+		<li>15, Rue de Foucharupt</li>
+		<li>88100 - Saint-Dié-des-Vosges</li>
+	</ul>
     </section>
 
     <!-- 
@@ -240,7 +240,7 @@
     <div class="form-card">
       <h3>Inscription aux événements</h3>
       <div class="form-container">
-        <iframe src="https://docs.google.com/forms/d/e/......" width="100%" height="500" frameborder="0" style="border-radius: 8px;"></iframe>
+        <iframe src="https://docs.google.com/forms/d/e/..." width="100%" height="500" frameborder="0" style="border-radius: 8px;"></iframe>
       </div>
       <p class="form-note">⚠️ Pensez à vérifier vos emails après inscription</p>
     </div>

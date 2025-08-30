@@ -1,7 +1,7 @@
 
 document.addEventListener("DOMContentLoaded", () => {
   // Onglet initial affiché
-  showTab('Club');
+  showTab('Entrainements');
 
   // Initialiser tous les carrousels
   const carousels = document.querySelectorAll('.carousel');
@@ -51,3 +51,19 @@ function showTab(tabId) {
   const tab = document.getElementById(tabId);
   if (tab) tab.style.display = 'block';
 }
+
+  // gerer le menu sur petit ecran
+  const menuToggle = document.getElementById('mobile-menu');
+  const nav = document.querySelector('nav');
+  const menuItems = document.querySelectorAll('.menu-box button');
+
+menuToggle.addEventListener('click', () => {
+  nav.classList.toggle('active'); // ouvre/ferme le menu
+});
+
+// Fermer le menu lorsqu'on clique sur un item
+menuItems.forEach(item => {
+  item.addEventListener('click', () => {
+    nav.classList.remove('active');
+  });
+});
