@@ -39,8 +39,9 @@ header {
   background-color: #FFFFFF; /*DCEEF7;  */
   font-family: 'Georgia', serif;
   color: white;
-  padding: 10px 20px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  padding: 5px 20px;
+  border-bottom: 1px solid #ccc; /* un gris clair */
+  box-shadow: none ; /*0 2px 5px rgba(0,0,0,0.1);  */
 }
 
 header img {
@@ -140,7 +141,7 @@ nav button:hover {
 	border: none;
 	background: none;
 	color: black;
-	border-bottom: 1px solid #800000;
+	border-bottom: 1px solid #ccc;
 	cursor: pointer;
 	font-size: 0.9rem; /* <-- taille du texte */
   }
