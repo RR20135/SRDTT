@@ -36,7 +36,7 @@ header {
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  background-color: #7B1E3A  ;/*FFFFFF; Rouge grenat   */
+  background-color: #FFFFF0;   /*  blanc cassé   7B1E3A  ; Rouge grenat   */
   font-family: 'Georgia', serif;
   color: white;
   padding: 5px 20px;
@@ -61,7 +61,7 @@ nav {
 
 nav button {
   background: none;
-  color: #FFCC99 ; /* black; /*white; */
+  color: black ; /* #FFCC99 ; /* black; /*white; */
   font-weight: bold;
   border: none;
   padding: 10px 15px;
@@ -70,7 +70,7 @@ nav button {
 }
 
 nav button:hover {
-  background-color: #87CEFA; /*  bleu clair pastel */
+  background-color: #A3C98B  ; /*  vert clair  #87CEFA; /*  bleu clair pastel */
   border-radius: 4px;
   color: #8b0000; /*  #8b0000;*/
 }
