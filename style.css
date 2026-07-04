@@ -23,6 +23,13 @@ img {
   box-sizing: border-box;
 }
 
+/* ==============================
+   FILET DE SECURITE ANTI-DEBORDEMENT MOBILE (ajout)
+   ============================== */
+html, body {
+  overflow-x: hidden;
+}
+
 /**************************************************
   _   _ _____    _    ____  _____ ____     ___     _   _    ___     _____ ____    _  _____ ___ ___  _   _ 
  | | | | ____|  / \  |  _ \| ____|  _ \   ( _ )   | \ | |  / \ \   / /_ _/ ___|  / \|_   _|_ _/ _ \| \ | |
@@ -32,6 +39,7 @@ img {
                                                                                                           
  **************************************************/
 header {
+  position: relative;   /* AJOUT: repère stable pour ancrer le menu mobile au header entier */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -43,14 +51,22 @@ header {
   border-bottom: 1px solid #ccc; /* un gris clair */
   box-shadow: none ; /*0 2px 5px rgba(0,0,0,0.1);  */
 }
-
+header h1 {
+  color: #222;   /* ou une couleur de ta charte, ex: darkred / #7B1E3A */
+  font-size: 1.1rem;
+  margin: 4px 0;
+  text-align: center;
+  width: 100%;   /* pour qu'il passe sur sa propre ligne en dessous du logo si besoin */
+}
 header img {
   height: 80px;
+  width: auto;
 }
 
 .header-logo {
   max-width: 100%;
   height: auto;
+  min-width: 0;   /* CORRECTIF: empêche flexbox de forcer une largeur minimale = image trop grande sur mobile */
 }
 
 nav {
@@ -111,9 +127,8 @@ nav button:hover {
 
 /* Responsive pour écran <768px */
 @media (max-width: 768px) {
-  nav {
-    position: relative;
-  }
+
+  /* SUPPRIME: "nav { position: relative; }" — c'est header qui porte position:relative désormais */
 
   /* Affiche le bouton ☰ Menu */
   .menu-toggle {
@@ -125,10 +140,10 @@ nav button:hover {
     display: none;
     flex-direction: column;
     position: absolute;
-    top: calc(100% + 60px); /* décale sous le burger 100%;*/
+    top: 100%;              /* CORRECTIF: ancré juste sous le header (plus de calc(100% + 60px)) */
     right: 0;
-    /*width: 100%; */
-	min-width: max-content; 
+    min-width: max-content;
+    max-width: 90vw;        /* AJOUT: garde-fou anti-débordement horizontal */
     background-color:  #f9f8f4; /* blanc cassé;*/
     box-shadow: 0 4px 12px rgba(0,0,0,0.3);
     z-index: 1000;
@@ -149,6 +164,17 @@ nav button:hover {
   /* Afficher le menu-box quand nav a la classe active */
   nav.active .menu-box {
     display: flex;
+  }
+}
+
+/* AJOUT: taille de logo contrôlée explicitement sur très petit écran */
+@media (max-width: 480px) {
+  header {
+    padding: 4px 12px;      /* AJOUT : réduit le padding vertical du bandeau sur mobile */
+  }
+  .header-logo {
+    max-width: 70px;
+    max-height: 50px;       /* AJOUT : plafonne réellement la hauteur du logo sur mobile */
   }
 }
 
@@ -203,7 +229,7 @@ footer {
 /**************************************************
                    _             _              _     _        __           
    ___ ___  _ __ | |_ __ _  ___| |_ ___    ___| |_  (_)_ __  / _| ___  ___ 
-  / __/ _ \| '_ \| __/ _` |/ __| __/ __|  / _ \ __| | | '_ \| |_ / _ \/ __|
+  / __/ _ \| '_ \| __/ _` |/__| __/ __|  / _ \ __| | | '_ \| |_ / _ \/ __|
  | (_| (_) | | | | || (_| | (__| |_\__ \ |  __/ |_  | | | | |  _| (_) \__ \
   \___\___/|_| |_|\__\__,_|\___|\__|___/  \___|\__| |_|_| |_|_|  \___/|___/
                                                                            
