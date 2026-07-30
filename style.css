@@ -99,14 +99,11 @@ nav button:hover {
 .menu-toggle {
   display: none;
   font-size: 2.0rem;
-  color: FFCC99; /*white; */
+  color: #FFCC99; /* Ajout du # manquant qui cassait la couleur */
   background: none;
   border: none;
   cursor: pointer;
   padding: 10px 15px;
-  position: absolute;
-  top: 20px;
-  right: 20px; /* collé en haut à droite du bandeau */
   z-index: 1100;
 }
 
@@ -128,8 +125,30 @@ nav button:hover {
 
 /* Responsive pour écran <768px */
 @media (max-width: 768px) {
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Pousse le logo à gauche et le nav/hamburger à droite */
+    align-items: center;
+  }
 
-  /* SUPPRIME: "nav { position: relative; }" — c'est header qui porte position:relative désormais */
+  /* On force le logo et la navigation à rester en haut */
+  .header-logo {
+    order: 1;
+  }
+
+  nav {
+    order: 2;
+  }
+
+  /* Le titre passe en dessous et prend toute la largeur */
+  header h1 {
+    order: 3;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    font-size: clamp(0.85rem, 3.5vw, 1.1rem); /* Légère réduction pour les petits écrans */
+  }
 
   /* Affiche le bouton ☰ Menu */
   .menu-toggle {
@@ -141,25 +160,25 @@ nav button:hover {
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 100%;              /* CORRECTIF: ancré juste sous le header (plus de calc(100% + 60px)) */
+    top: 100%;             
     right: 0;
     min-width: max-content;
-    max-width: 90vw;        /* AJOUT: garde-fou anti-débordement horizontal */
-    background-color:  #f9f8f4; /* blanc cassé;*/
+    max-width: 90vw;        
+    background-color: #f9f8f4; 
     box-shadow: 0 4px 12px rgba(0,0,0,0.3);
     z-index: 1000;
   }
 
   .menu-box button {
-	width: 100%;
-	text-align: left;
-	padding: 12px 20px;
-	border: none;
-	background: none;
-	color: black;
-	border-bottom: 1px solid #ccc;
-	cursor: pointer;
-	font-size: 0.9rem; /* <-- taille du texte */
+    width: 100%;
+    text-align: left;
+    padding: 12px 20px;
+    border: none;
+    background: none;
+    color: black;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+    font-size: 0.9rem; 
   }
 
   /* Afficher le menu-box quand nav a la classe active */
@@ -176,6 +195,7 @@ nav button:hover {
   .header-logo {
     max-width: 70px;
     max-height: 50px;       /* AJOUT : plafonne réellement la hauteur du logo sur mobile */
+    object-fit: contain;    /* CORRECTION : évite de déformer le logo si le ratio change */	
   }
 }
 
