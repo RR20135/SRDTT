@@ -64,8 +64,9 @@ header img {
 }
 
 .header-logo {
-  max-width: 100%;
+  width: 100%;
   height: auto;
+  max-width: 90px; 
   min-width: 0;   /* CORRECTIF: empêche flexbox de forcer une largeur minimale = image trop grande sur mobile */
 }
 
